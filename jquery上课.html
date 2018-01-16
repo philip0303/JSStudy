@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.2.1.min.js"></script>
+
+
+    <script>
+        $(document).ready(function () {
+            <!--使用.test 隐藏所有class=test的元素-->
+            $("button#test1").click(function () {
+                $(".test").hide();
+            });
+            $("button#test3").click(function () {
+                $(".test").show();
+            });
+        });
+        //隐藏ID为test的元素
+        $(document).ready(function () {
+            <!--使用.test 隐藏所有class=test的元素-->
+            $("p#test").click(function () {
+                $("p#test").hide();
+            });
+        });
+
+        $(document).ready(function () {
+            $("button.test2").click(function () {
+                //改变当前有href属性的标签的颜色为红色
+                $("[href]").css("background-color","red");
+            });
+            $("button.test2").click(function () {
+                //改变当前有href属性的标签的颜色为红色
+                $("[href]").attr("href","http://www.taobao.com");
+            });
+
+
+        });
+        $(document).ready(function () {
+            <!--使用.test 隐藏所有class=test的元素-->
+            $("button.test1").click(function () {
+                $(".test").hide(1000);
+            });
+            $("button.test3").click(function () {
+                $(".test").show(1000);
+            });
+        });
+
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("p").toggle();
+            });
+        });
+        $(document).ready(function () {
+            $(".b2").click(function () {
+                $(".b1").toggle();
+            });
+        });
+        $(document).ready(function () {
+           $("button.fade").click(function () {
+               $("#div1").fadeOut();
+               $("#div2").fadeOut(1000);
+               $("#div3").fadeOut("slow")
+           });
+            $("button.fade2").click(function () {
+                $("#div1").fadeIn(1000);
+                $("#div2").fadeIn(3000);
+                $("#div3").fadeIn("slow")
+            });
+        });
+    $(document).ready(function () {
+       $("button.fadeToggle").click(function () {
+           $("#div1").fadeToggle(1000);
+           $("#div2").fadeToggle(2000);
+           $("#div3").fadeToggle(3000);
+       })
+    });
+    $(document).ready(function () {
+        $("button.fadeTo").click(function () {
+            $("#div4").fadeTo(1000,0.2);
+            $("#div5").fadeTo(2000,0.5);
+            $("#div6").fadeTo(3000,0.9);
+        })
+    })
+
+
+    </script>
+
+
+</head>
+<body>
+<!--<p class="test">我会隐身</p>
+<p class="test">我也会隐身</p>
+<button id="test1">隐藏</button>
+<button id="test3">显示</button><br>
+
+<button class="test4">缓慢隐藏</button>
+<button class="test5">缓慢显示</button>
+<p id="test">我不会</p>
+<hr/>
+<a href="https://www.baidu.com">连接</a>
+<button class="test2">点击</button>
+<hr/>
+<button type="button">切换</button>
+<p>这是一个段落</p>
+<p>这是另外一个段落</p>
+<hr/>
+<p class="b2">这个有替换的</p>
+<p class="b1">这个是将要替换的</p>
+<hr/>-->
+演示带有不同参数的fadeIn方法<br/>
+<button class="fade">淡出</button>
+<button class="fade2">淡入</button>
+<div id="div1" style="width:80px;height:80px;display:none;background-color:red;"></div>
+<div id="div2" style="width:80px;height:80px;display:none;background-color:green;"></div>
+<div id="div3" style="width:80px;height:80px;display:none;background-color:brown;"></div>
+<br/>
+<button class="fadeToggle">淡入/淡出</button>
+<br/>
+<button class="fadeTo">fadeTo</button>
+<div id="div4" style="width:80px;height:80px;display:none;background-color:green;"></div>
+<div id="div5" style="width:80px;height:80px;display:none;background-color:green;"></div>
+<div id="div6" style="width:80px;height:80px;display:none;background-color:green;"></div>
+</body>
+</html>

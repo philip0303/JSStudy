@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Uda</title>
+    <style>
+        #red{
+            border: 2px solid red;
+        }
+        .red{
+            border:2px solid cadetblue;
+            display: flex;
+        }
+
+        .row{
+            width: 100%;
+        }
+        .col-1{
+            width: 8.33%;
+        }
+        .col-2{
+            width: 16.66%;
+        }
+        .col-3{
+            width: 25%;
+        }
+        .col-4{
+            width: 33.33%;
+        }
+        .col-5{
+            width: 41.66%;
+        }
+        .col-6{
+            width: 50%;
+        }
+        .col-9{
+            width: 75%;
+        }
+        .col-10{
+            width:83.34%;
+        }
+    </style>
+    <script type="text/javascript">
+
+        function sum(num1,num2) {
+            return num1+num2;
+        }
+        function  getScore(score) {
+            if(score>90){
+                alert("奖励")
+            }else if(score>80){
+                alert("鼓励")
+            }else if (score>60){
+                alert("加油")
+            }else{
+                alert("暴揍")
+            }
+        };
+        var x = 98.99;
+        var y;
+        document.write(typeof (x)+"<br/>类型");
+        document.write("<br/>Y的值是"+y+"<br/>");
+    </script>
+    <script type="text/javascript" src="Test.js">
+
+        /*document.write("hello");*/
+        
+
+        
+        
+    </script>
+</head>
+<body>
+<input type="button" value="成绩" onclick="JavaScript:alert(getScore(20))">
+<input type="button" value="点击有惊喜" onclick="JavaScript:alert(sum(1,4))">
+<input type="button" value="臭欢欢" onclick="JavaScript:alert('我爱你！')">
+<div id="red" style="border: 1px solid red">
+    <div class="row"style="border: 1px solid red">
+        <div class="col-1"style="border: 1px solid red"> 占用1/12</div>
+
+    </div>
+    <div class="row" style="border: 1px solid red">
+        <div class="col-2" style="border: 1px solid red">占用2/12</div>
+        <div class="col-10"style="border: 1px solid red">占用10/12</div>
+    </div>
+    <div class="row"style="border: 1px solid red">
+        <div class="col-3"style="border: 1px solid red">占用3/12</div>
+        <div class="col-3"style="border: 1px solid red">占用3/12</div>
+        <div class="col-3"style="border: 1px solid red">占用3/12</div>
+        <div class="col-3"style="border: 1px solid red">占用3/12</div>
+    </div>
+    <div class="row"style="border: 1px solid red">
+        <div class="col-4"style="border: 1px solid red">占用4/12</div>
+        <div class="col-4"style="border: 1px solid red">占用4/12</div>
+        <div class="col-4">占用4/12</div>
+    </div>
+
+    <div class="row">
+        <div class="col-6">占用6/12</div>
+        <div class="col-6">占用6/12</div>
+    </div>
+    <div class="row">
+        <div class="col-3">占用3/12</div>
+        <div class="col-9">占用9/12</div>
+    </div>
+    <table border="1" align="center">
+        <tr >
+            <td colspan="3">三年级五班数学语文成绩</td>
+        </tr>
+        <tr>
+            <td rowspan="2">白杨</td>
+            <td>语文</td>
+            <td>98</td>
+        </tr>
+        <tr>
+
+            <td>数学</td>
+            <td>88</td>
+
+        </tr>
+        <tr>
+            <td rowspan="2">汪洋</td>
+            <td>语文</td>
+            <td>98</td>
+        </tr>
+        <tr>
+
+            <td>数学</td>
+            <td>88</td>
+
+        </tr>
+    </table>
+</div>
+</body>
+</html>

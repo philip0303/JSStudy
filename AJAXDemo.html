@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        function send(){
+            var xmlRequest;
+            if (window.XMLHttpRequest){
+                //选择服务器版本
+                //此处为高版本浏览器
+                xmlRequest = new XMLHttpRequest();
+            }else {
+                //低版本浏览器
+                xmlRequest = new ActiveXObject();
+            }
+            //
+            xmlRequest.onreadystatechange = function () {
+                if (xmlHttpRequest.readyState==4&&xmlHttpRequest.status==200){
+                    //响应
+                    document.getElementById("123").innerText = xmlHttpRequest.responseText;
+                }
+            };
+            //异步请求
+           // get提交         xmlRequest.open("get","http://192.168.5.191:8080/hello",true);
+            xmlRequest.open("post","http://192.168.5.113:8082/login",true);
+            xmlRequest.setRequestHeader("Content-Type","application/x-www-form--urlencoded");
+           // get提交
+            //xmlRequest.send();
+            xmlRequest.send("username=admin&password=123");//表单用户名和密码
+        }
+
+    </script>
+</head>
+<body>
+<button onclick="send()">点我 </button>
+<div id="123"></div>
+</body>
+</html>

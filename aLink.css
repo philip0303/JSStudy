@@ -1,0 +1,27 @@
+
+/* */
+a:link{
+    color: aqua;
+    text-decoration: none;
+}
+
+     a:visited{
+         color: brown;
+         text-decoration: none;
+     }
+
+     a:hover{
+         color: #256392;
+         text-decoration: underline;
+        cursor: crosshair;
+         /*鼠标形状
+
+        pointer
+
+        */
+     }
+
+     a:active{
+         color: chartreuse;
+         text-decoration: underline;
+     }

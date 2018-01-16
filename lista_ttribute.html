@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>列表属性</title>
+    <style type="text/css">
+        .list_a{
+            background-image:url("list_attribute.jpg");
+            /*设置背景图片*/
+            background-repeat: no-repeat;
+            /*背景图片只显示一张，不会重复*/
+            color: cornsilk;
+            /*定义字体颜色*/
+        }
+        .list_a{
+            list-style:none;
+            /*list-style-image: url("list_attribute.jpg"); !*将图片设置为列表项标志,设置之后将跟随列表项复制图片*!*/
+            list-style-position: inside; /*设置列表中列表项标志的位置*/
+            list-style-type: circle;
+        }
+    </style>
+</head>
+<body>
+    <!--DIV标签为空白标签-->
+    <div class="list_a">
+        <!--标题-->
+        <h2>
+            字体属性
+        </h2>
+        <!--列表-->
+        <ol>
+            <li>
+                定义字体类型
+            </li>
+            <li>
+                定义字体大小
+            </li>
+            <li>
+                定义字体粗细
+            </li>
+        </ol>
+    </div>
+</body>
+</html>

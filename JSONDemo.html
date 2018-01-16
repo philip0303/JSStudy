@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSON</title>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        var  JSONObject = {
+            "name":"Janet",
+            "age":"18",
+            "address":"陕西西安",
+            "phone":"111111"
+        };
+        /*jQuery的使用！不用管标签的前后*/
+    $(document).ready(function () {
+        $("#name").html(JSONObject.name);
+        $("#age").html(JSONObject.age);
+        $("#add").html(JSONObject.address);
+        $("#number").html(JSONObject.phone)
+    })
+        var persons = [
+            {  "name":"Janet",
+                "age":"18",
+                "address":"陕西西安",
+                "phone":"111111"},
+            {  "name":"haha",
+                "age":"17",
+                "address":"beijing",
+                "phone":"1222"},
+            {  "name":"jack",
+                "age":"19",
+                "address":"西安",
+                "phone":"11143"}
+        ];
+        persons[1].name = "李婷";
+        var txt = '{"persons" : [' +
+            '            {  "name":"Janet",' +
+            '                "age":"18",' +
+            '                "address":"陕西西安",' +
+            '                "phone":"111111"},' +
+            '            {  "name":"haha",' +
+            '                "age":"17",' +
+            '                "address":"beijing",' +
+            '                "phone":"1222"},' +
+            '            {  "name":"jack",' +
+            '                "age":"19",' +
+            '                "address":"西安",' +
+            '                "phone":"11143"}' +
+            '        ]}';
+        obj = JSON.parse(txt);
+   /* var obj = eval("("+txt+")");*/
+    </script>
+</head>
+<body>
+    姓名：<span id="name"></span><br>
+    年龄：<span id="age"></span><br>
+    地址：<span id="add"></span><br>
+    电话：<span id="number"></span><br>
+    document：<span id="haha"></span><br/>
+    通过JSON数组创建对象：<span id="nua"></span><br>
+    通过JSON字符串创建对象：<span id="txt"></span>
+
+
+<script>
+    document.getElementById("haha").innerHTML = JSONObject.name;
+    document.getElementById("nua").innerHTML = persons[1].name;
+    document.getElementById("txt").innerText = obj.persons[2].name;
+</script>
+</body>
+</html>

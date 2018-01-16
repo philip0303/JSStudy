@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <!--  //引入jQuery-->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script>
+        /*//文档就绪函数*/
+        $(document).ready(function () {
+            /*标签引用button    click 点击事件*/
+            $("#getBut").click(function () {
+               /* 发送get请求*/
+                $.get("http://192.168.5.113:8082/hello",function (data,status) {
+                    alert("数据："+data+",状态："+status)
+                })
+            })
+        });
+
+        $(document).ready(function () {
+            $("#postBut").click(function () {
+
+                $.post("http://192.168.5.113:8082/login",
+                    {
+                    username:"admin",
+                        password:"123"
+                },
+                function (data,sta) {
+                    alert("数据:"+data+",状态:"+sta)
+                }
+                );
+            });
+            //jQuery的ajax方法提交请求
+            $("#AjaxBut").click(function () {
+                //返回对象
+                htmlObj = $.ajax(
+                    {
+                        url:"http://192.168.5.113:8083/hello",
+                        async:true
+                    }
+                );
+                setTimeout(9000);
+                //responseText能够获取当前对象
+                alert(htmlObj.responseText);
+
+
+            })
+            //jQuery的ajax方法提交请求
+            $("#AjaxBut").click(function () {
+                //返回对象
+                htmlObj = $.ajax(
+                    {
+                        url:"http://192.168.5.113:8083/hello",
+                        async:true,
+                        //ajax中的回调方式 当成功的时候调用这个函数
+                        success:function () {
+                            //responseText能够获取当前对象
+                            alert(htmlObj.responseText);
+                        }
+                    }
+                );
+
+
+
+
+            })
+
+
+
+
+
+
+
+
+
+
+
+        })
+    </script>
+
+</head>
+<body>
+<div align="center" style="color: chartreuse ;font-family: 'Adobe 仿宋 Std R'">
+<button id="getBut">
+    get请求
+</button><br><br>
+<button id="postBut">
+    post请求
+</button><br><br>
+<button id="AjaxBut">
+    Ajax请求
+</button>
+</div>
+</body>
+</html>

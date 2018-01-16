@@ -1,0 +1,21 @@
+h1{
+    color: cyan;
+}
+h2{
+    line-height: 30px;
+}
+.first_p{
+    text-align: center;
+}
+h3{
+    letter-spacing: 30px;
+}
+h4{
+    text-decoration: line-through;
+}
+h5{
+    white-space:nowrap;
+}
+#A{
+    font-family: 幼圆;
+}
